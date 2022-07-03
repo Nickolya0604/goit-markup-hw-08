@@ -1,0 +1,24 @@
+@import './utils/mixins';
+@import './utils/_variables';
+@import './utils/selectors';
+
+@import './components/index/header';
+@import './components/index/contacts';
+@import './components/index/logo';
+@import './components/index/mobile-menu';
+
+@import './components/index/hero';
+@import './components/index/buttons';
+@import './components/index/benefits';
+@import './components/index/work';
+@import './components/index/team';
+@import './components/index/clients';
+
+@import './components/index/footer';
+@import './components/index/join';
+@import './components/index/sign';
+
+@import './components/index/modal';
+
+@import './components/portfolio/card-set';
+@import './components/portfolio/portfolio-btn';

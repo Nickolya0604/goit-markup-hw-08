@@ -1,0 +1,76 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--primary-background-color);
+  color: var(--primary-text-color);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include mobile {
+    width: 480px;
+  }
+  @include tablet {
+    width: 768px;
+  }
+  @include desktop {
+    width: 1200px;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+.section {
+  @include mobile {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include tablet {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}

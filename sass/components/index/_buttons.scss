@@ -1,0 +1,70 @@
+.button__order {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--background-and-button-logo-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  min-width: 200px;
+  height: 50px;
+}
+
+.sign__button {
+  width: 200px;
+  height: 50px;
+  display: inline-flex;
+  @include tablet {
+    display: flex;
+    margin: auto;
+  }
+  @include desktop {
+    display: inline-flex;
+  }
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  color: var(--background-and-button-logo-color);
+  padding: 10px 28px;
+}
+
+.button-close {
+  position: absolute;
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  padding: 6px;
+  background-color: var(--background-and-button-logo-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.button-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--background-and-button-logo-color);
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  &:focus {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
