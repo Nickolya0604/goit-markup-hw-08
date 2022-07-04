@@ -1,5 +1,7 @@
 .sign__label {
-  display: inline-block;
+  @include desktop {
+    display: inline-block;
+  }
 }
 
 .sign__title {
@@ -13,9 +15,13 @@
 }
 
 .sign__input {
-  min-width: 450px;
+  width: 100%;
+  color: var(--background-and-button-logo-color);
+  @include tablet {
+    width: 450px;
+  }
   @include desktop {
-    min-width: 358px;
+    width: 358px;
   }
   height: 50px;
   background-color: var(--background-color);

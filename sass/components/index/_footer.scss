@@ -60,14 +60,9 @@
 }
 
 .address {
-  @include desktop {
-    margin-right: 70px;
-  }
-}
-
-.address__list {
   margin-bottom: 60px;
   @include desktop {
+    margin-right: 70px;
     margin-bottom: 0;
   }
 }

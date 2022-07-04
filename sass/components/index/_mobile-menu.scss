@@ -1,8 +1,12 @@
 .mob-menu__open,
 .mob-menu__close {
-  @media screen and (min-width: 767px) {
+  @include tablet {
     display: none;
   }
+  @include desktop {
+    display: none;
+  }
+
   display: block;
   margin-left: auto;
   background-color: var(--background-and-button-logo-color);
@@ -30,8 +34,6 @@
 }
 
 .mob-menu__container {
-  display: flex;
-  flex-direction: column;
   height: 100%;
   padding-left: 40px;
   padding-right: 15px;

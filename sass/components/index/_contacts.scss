@@ -1,11 +1,12 @@
 .contacts {
-  @media screen and (max-width: 767px) {
+  @media not screen and (min-width: 768px) {
     display: none;
   }
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 21px;
   margin-bottom: 21px;
   flex-direction: column;

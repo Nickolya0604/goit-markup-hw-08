@@ -55,17 +55,9 @@ img {
   width: 100%;
 }
 
-@media screen and (min-width: 480px) {
-  .section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .section {
@@ -122,7 +114,7 @@ img {
 .site-nav__list {
   margin-left: 93px;
 }
-@media screen and (max-width: 767px) {
+@media not screen and (min-width: 768px) {
   .site-nav__list {
     display: none;
   }
@@ -173,9 +165,9 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-top: 21px;
   margin-bottom: 21px;
   -webkit-box-orient: vertical;
@@ -183,7 +175,7 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-@media screen and (max-width: 767px) {
+@media not screen and (min-width: 768px) {
   .contacts {
     display: none;
   }
@@ -294,7 +286,13 @@ img {
   margin-left: auto;
   background-color: var(--background-and-button-logo-color);
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
+  .mob-menu__open,
+.mob-menu__close {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
   .mob-menu__open,
 .mob-menu__close {
     display: none;
@@ -325,13 +323,6 @@ img {
 }
 
 .mob-menu__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   height: 100%;
   padding-left: 40px;
   padding-right: 15px;
@@ -426,7 +417,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 480px;
+  max-width: 767px;
   min-height: 400px;
   margin-left: auto;
   margin-right: auto;
@@ -445,7 +436,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .section.hero {
-    max-width: 768px;
+    max-width: 1199px;
     min-height: 400px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-tab.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-tab.jpg");
@@ -670,7 +661,7 @@ img {
   background-color: var(--background-and-button-logo-color);
   text-align: center;
 }
-@media screen and (max-width: 1199px) {
+@media not screen and (min-width: 1200px) {
   .section.work {
     display: none;
   }
@@ -793,8 +784,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 206px;
-  height: 44px;
+  max-width: 206px;
+  max-height: 44px;
   margin: 0px 122px 24px 122px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1011,17 +1002,12 @@ img {
   color: var(--accent-color);
 }
 
-@media screen and (min-width: 1200px) {
-  .address {
-    margin-right: 70px;
-  }
-}
-
-.address__list {
+.address {
   margin-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
-  .address__list {
+  .address {
+    margin-right: 70px;
     margin-bottom: 0;
   }
 }
@@ -1090,8 +1076,10 @@ img {
   background-color: var(--accent-color);
 }
 
-.sign__label {
-  display: inline-block;
+@media screen and (min-width: 1200px) {
+  .sign__label {
+    display: inline-block;
+  }
 }
 
 .sign__title {
@@ -1105,7 +1093,8 @@ img {
 }
 
 .sign__input {
-  min-width: 450px;
+  width: 100%;
+  color: var(--background-and-button-logo-color);
   height: 50px;
   background-color: var(--background-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1115,9 +1104,14 @@ img {
   padding-left: 16px;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 768px) {
+  .sign__input {
+    width: 450px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .sign__input {
-    min-width: 358px;
+    width: 358px;
   }
 }
 @media screen and (min-width: 1200px) {
